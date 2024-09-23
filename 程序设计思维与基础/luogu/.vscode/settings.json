@@ -4,7 +4,9 @@
         "string": "cpp",
         "format": "cpp",
         "iomanip": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "numbers": "cpp",
+        "*.tcc": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

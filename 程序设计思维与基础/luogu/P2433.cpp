@@ -9,21 +9,22 @@ int main()
     cin >> T;
     if (T == 1)
     {
-        cout << "I love Luogu!";
+        cout << "I love Luogu!" << endl;
     }
     else if (T == 2)
     {
-        cout << 2 + 4 << " " << 10 - 2 - 4;
+        cout << 2 + 4 << " " << 10 - 2 - 4 << endl;
     }
     else if (T == 3)
     {
-        cout << (int(14 / 4)) << endl
-             << (14 - (14 % 4)) << endl
-             << (14 % 4);
+        int a = 14 / 4;
+        cout << a << endl;
+        cout << a * 4 << endl;
+        cout << 14 - a * 4 << endl;
     }
     else if (T == 4)
     {
-        cout << fixed << setprecision(6) << (double)((double)500 / (double)3) << endl;
+        cout << fixed << setprecision(3) << (double)((double)500 / (double)3) << endl;
     }
     else if (T == 5)
     {
@@ -31,7 +32,7 @@ int main()
     }
     else if (T == 6)
     {
-        cout << sqrt(6 * 6 + 9 * 9) << endl;
+        cout << sqrt((double)6 * (double)6 + (double)9 * (double)9) << endl;
     }
     else if (T == 7)
     {
@@ -41,30 +42,30 @@ int main()
     }
     else if (T == 8)
     {
-        cout << (2 * 5 * 3.141592) << endl
-             << (5 * 5 * 3.141593) << endl
-             << ((4 / 3) * 3.141593 * 5 * 5 * 5) << endl;
+        cout << 3.141593 * 10 << endl
+             << 3.141593 * 25 << endl
+             << 4.0 / 3 * 3.141593 * 125 << endl;
     }
     else if (T == 9)
     {
-        cout << (((((1 + 1) * 2) + 1) * 2) + 1) * 2 << endl;
+        cout << (((1 + 1) * 2 + 1) * 2 + 1) * 2 << endl;
     }
     else if (T == 10)
     {
-        cout << ceil((126 - 10) / 12) << endl;
+        cout << (int)ceil((126 - 10) / 12) << endl;
     }
     else if (T == 11)
     {
-        cout << 100 / (8 - 5) << endl;
+        cout << (double)100 / (8 - 5) << endl;
     }
     else if (T == 12)
     {
-        cout << 13 << endl
+        cout << 'M' - 'A' + 1 << endl
              << "R" << endl;
     }
-    else if (T == 13)
+    else if (T == 13) //
     {
-        cout << (int)pow((3.141593 * 4 * 4 * 4 * (4 / 3)) + (3.141593 * 4 * 4 * 4 * (4 / 3)), (1 / 3)) << endl;
+        cout << (int)(pow(4 / 3 * 3.141593 * (4 * 4 * 4 + 10 * 10 * 10), 1.0 * 1 / 3));
     }
     else if (T == 14)
     {
