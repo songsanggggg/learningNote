@@ -12,7 +12,7 @@ int main()
     }
     else
     {
-        cout << m - ceil((0.1 * s) / (0.1 * t))
+        cout << m - ceil((0.1 * s) / (0.1 * t)) << endl;
     }
 
     return 0;
