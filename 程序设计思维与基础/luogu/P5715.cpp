@@ -3,39 +3,27 @@ using namespace std;
 
 int main()
 {
-    int year = 0, month = 0, day = 0;
-    cin >> year >> month;
-    switch (month)
+    int a = 0, b = 0, c = 0, d = 0;
+    cin >> a >> b >> c;
+    if (a > b)
     {
-    case 1:
-        day = 31;
-    case 2:
-        day = 28;
-    case 3:
-        day = 31;
-    case 4:
-        day = 30;
-    case 5:
-        day = 31;
-    case 6:
-        day = 30;
-    case 7:
-        day = 31;
-    case 8:
-        day = 31;
-    case 9:
-        day = 30;
-    case 10:
-        day = 31;
-    case 11:
-        day = 30;
-    case 12:
-        day = 31;
+        d = a;
+        a = b;
+        b = d;
     }
-
-    if (((year % 400 == 0) || (year % 100 != 0 && year % 4 == 0)) && month == 2)
-        day = 29;
-    cout << day << endl;
+    if (a > c)
+    {
+        d = a;
+        a = c;
+        c = d;
+    }
+    if (b > c)
+    {
+        d = b;
+        b = c;
+        c = d;
+    }
+    cout << a << " " << b << " " << c << endl;
 
     return 0;
 }
