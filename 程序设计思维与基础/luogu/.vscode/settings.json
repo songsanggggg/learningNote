@@ -6,7 +6,7 @@
         "iomanip": "cpp",
         "ostream": "cpp",
         "numbers": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "random": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
 }
