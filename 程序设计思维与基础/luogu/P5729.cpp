@@ -21,7 +21,8 @@ int main()
     int cutNum = 0;
     cin >> cutNum;
 
-    cutArgument cutArr[cutNum] = {};
+    cutArgument  * pCutArr = new cutArgument[cutNum]{};
+    cutArgument cutArr[] = * pCutArr;
     for(int i = 0; i < cutNum; i++)
     {
         cin >> cutArr[i].xStart >> cutArr[i].yStart >> cutArr[i].zStart;
