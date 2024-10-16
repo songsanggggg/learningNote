@@ -1,26 +1,41 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 using namespace std;
 
 int main()
 {
-    int count = 0;
-    cin >> count;
+    int n;
+    cin >> n;
 
-    int *arr = new int[sizeof(int) * count]();
-    for (int i = 0; i < count; i++)
-        cin >> arr[i];
-    sort(arr, arr + count);
-
-    int pastNum = arr[0], temCount = 0, maxCount = 0;
-    for (int i = 1; i <= count - 1; i++)
+    int *arr = new int[n];
+    for (int i = 0; i < n; ++i)
     {
-        if (arr[i] == (pastNum + 1))
-            temCount++;
-        if (temCount >= maxCount)
-            maxCount = temCount;
+        cin >> arr[i];
     }
-    cout << (maxCount + 1) << endl;
 
+    int longestLength = 0;
+    int currentLength = 1;
+
+    for (int i = 1; i < n; ++i)
+    {
+        if (arr[i] == arr[i - 1])
+        {
+            continue;
+        }
+        if (arr[i] == arr[i - 1] + 1)
+        {
+            currentLength++;
+        }
+        else
+        {
+            longestLength = max(longestLength, currentLength);
+            currentLength = 1;
+        }
+    }
+
+    longestLength = max(longestLength, currentLength);
+    cout << longestLength << endl;
+
+    delete[] arr;
     return 0;
 }
