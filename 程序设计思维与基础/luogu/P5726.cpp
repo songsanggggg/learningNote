@@ -1,6 +1,6 @@
-#include <iostream>
 #include <algorithm>
 #include <iomanip>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -14,7 +14,8 @@ int main()
     sort(arr, arr + count);
     for (int i = 1; i < count - 1; i++)
         total += arr[i];
-    cout << fixed << setprecision(2) << ((double)total / (double)(count - 2)) << endl;
+    cout << fixed << setprecision(2) << ((double)total / (double)(count - 2))
+         << endl;
 
     return 0;
 }
