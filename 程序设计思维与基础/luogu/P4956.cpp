@@ -1,29 +1,25 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+#include <stdbool.h>
 
 int main()
 {
-  int n = 0;
-  cin >> n;
-
-  int bestK = 0, bestX = 0;
-  bool a = 1;
-
-  for (int k = 0; a; k++)
+  int x = 0, k = 0, n = 0;
+  scanf("%d", &n);
+  bool flag = 0;
+  for (x = 100; x > 0; x--)
   {
-    for (int x = 200; a; x--)
+    for (k = 1; k < 100000; k++)
     {
-      if ((int)((n - (double)(1092 * k)) / 364) == (n - (double)(1092 * k)) / 364)
+      if (364 * x + 1092 * k == n)
       {
-        a = 0;
-        bestK = k;
-        bestX = x;
+        printf("%d\n%d", x, k);
+        flag = 1;
+        break;
       }
+      if (flag == 1)
+        break;
     }
   }
-
-  cout << bestX << endl
-       << bestK << endl;
 
   return 0;
 }
