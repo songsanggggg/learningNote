@@ -5,23 +5,37 @@ int main(int argc, char const *argv[])
 {
     int count = 0;
     scanf("%d", &count);
-    int *arr = (int *)malloc(count * 4 * sizeof(int));
+
+    int *stuInfo = (int *)malloc(3 * count * sizeof(int));
+
     for (int i = 0; i < count; i++)
     {
-        scanf("%d %d %d", arr + 4 * i, arr + 1 + 4 * i, arr + 2 + 4 * i);
-        *(arr + 4 + 4 * i) = *(arr + 4 * i) + *(arr + 1 + 4 * i) + *(arr + 2 + 4 * i);
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &stuInfo[i * 3 + j]);
+        }
     }
-    int number = 0;
+
+    int num = 0;
+
     for (int i = 0; i < count; i++)
     {
         for (int j = i + 1; j < count; j++)
         {
-            if (*(arr + i * 4) - *(arr + j * 4) <= 5 && *(arr + 1 + i * 4) - *(arr + 1 + j * 4) <= 5 && *(arr + 2 + i * 4) - *(arr + 2 + j * 4) <= 5 && *(arr + 3 + i * 4) - *(arr + 3 + j * 4) <= 10)
-                number++;
+
+            if (abs(stuInfo[i * 3] - stuInfo[j * 3]) <= 5 &&
+                abs(stuInfo[i * 3 + 1] - stuInfo[j * 3 + 1]) <= 5 &&
+                abs(stuInfo[i * 3 + 2] - stuInfo[j * 3 + 2]) <= 5 &&
+                abs((stuInfo[i * 3] + stuInfo[i * 3 + 1] + stuInfo[i * 3 + 2]) -
+                    (stuInfo[j * 3] + stuInfo[j * 3 + 1] + stuInfo[j * 3 + 2])) <= 10)
+            {
+                num++;
+            }
         }
     }
-    printf("%d", number);
-    free(arr);
+
+    printf("%d\n", num);
+    free(stuInfo);
 
     return 0;
 }
