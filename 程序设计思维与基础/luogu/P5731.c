@@ -27,7 +27,7 @@ void generate_snake_matrix(int n)
 
         if (nx < 0 || nx >= n || ny < 0 || ny >= n || matrix[nx][ny] != 0)
         {
-            direction_index = (direction_index + 1) % 4; // 顺时针改变方向
+            direction_index = (direction_index + 1) % 4;
             nx = x + directions[direction_index][0];
             ny = y + directions[direction_index][1];
         }

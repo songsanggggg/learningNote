@@ -1,12 +1,8 @@
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
 
 int main(int argc, char const *argv[])
 {
-    srand(time(NULL));
-    float a = rand();
-    printf("%f", a);
-
+    char c1 = 6, c2 = 0;
+    printf("%c,%c,%d,%d", c1, c2, c1 + c2, c1 - c2);
     return 0;
 }
