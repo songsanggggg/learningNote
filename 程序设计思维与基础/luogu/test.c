@@ -1,8 +1,12 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
+#define N 2
+#define Y(n) ((N + 1) * (n))
+
+int main()
 {
-    char c1 = 6, c2 = 0;
-    printf("%c,%c,%d,%d", c1, c2, c1 + c2, c1 - c2);
+    int z = 2 * (N + Y(4 + 1));
+    printf("%d\n", z);
+
     return 0;
 }
